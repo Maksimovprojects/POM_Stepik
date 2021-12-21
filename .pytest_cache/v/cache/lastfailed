@@ -1,1 +1,3 @@
-{}
+{
+  "TestSection3/SubTask3/test_parser.py::test_guest_should_see_login_link": true
+}
