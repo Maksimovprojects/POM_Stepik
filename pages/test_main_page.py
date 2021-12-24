@@ -1,6 +1,5 @@
 from .main_page import MainPage
-from selenium import webdriver
-from selenium.webdriver.common.by import By
+
 
 def test_quest_can_go_to_login_page(browser):
     link = "http://selenium1py.pythonanywhere.com/"

@@ -1,6 +1,5 @@
 {
   "TestSection3/SubTask3/test_parser.py::test_guest_should_see_login_link": true,
   "TestSection3/SubTask4/test_rerun.py::test_guest_should_see_login_link_fail": true,
-  "TestSection4_POM/test_main_page.py::test_quest_can_go_to_login_page": true,
-  "pages/test_main_page.py::test_quest_should_see_login_link": true
+  "TestSection4_POM/test_main_page.py::test_quest_can_go_to_login_page": true
 }
