@@ -1,9 +1,7 @@
 from selenium.webdriver.common import alert
 from .base_page import BasePage
 from .locators import MainPageLocators
-from .login_page import LoginPage
 
-from selenium.webdriver.common.by import By # In selenium 4.1.0 methods browser.find_element_by_css_selector outdated
 
 class MainPage(BasePage):
     def go_to_login_page(self):
@@ -11,7 +9,6 @@ class MainPage(BasePage):
         login_link.click()
         alert = self.browser.switch_to.alert
         alert.accept()
-
 
     def should_be_login_link(self):
         assert self.is_element_present(*MainPageLocators.LOGIN_LINK), "Login link is not presented"
