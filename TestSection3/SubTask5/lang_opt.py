@@ -1,3 +1,4 @@
+from selenium.webdriver.chrome import webdriver
 from selenium.webdriver.chrome.options import Options
 
 options = Options()
