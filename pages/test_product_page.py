@@ -18,7 +18,7 @@ def test_guest_can_add_product_to_basket(browser):
     product_page = ProductPage(browser, browser.current_url)
     product_page.should_be_available_click_add_to_basket()
     product_page.test_solve_quiz_and_get_code()
-    product_page.should_be_name_of_item_added_to_basket()
+    product_page.should_be_name_of_item_added_to_basket_the_same()
     product_page.basket_price_equals_product_page_price()
 
 
@@ -38,7 +38,39 @@ def test_guest_can_add_product_to_basket_list_links(browser, link):
     product_page = ProductPage(browser, browser.current_url)
     product_page.should_be_available_click_add_to_basket()
     product_page.test_solve_quiz_and_get_code()
-    product_page.should_be_name_of_item_added_to_basket()
+    product_page.should_be_name_of_item_added_to_basket_the_same()
     product_page.basket_price_equals_product_page_price()
+
+
+# def test_train_abstract_methods(browser, link):
+
+def test_guest_cant_see_success_message_after_adding_product_to_basket(browser): # mark as fail test
+    link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
+    page = ProductPage(browser, link)
+    page.open()
+    product_page = ProductPage(browser, browser.current_url)
+    product_page.should_be_available_click_add_to_basket()
+    product_page.should_not_be_success_message()
+
+def test_guest_cant_see_success_message(browser):
+    link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
+    page = ProductPage(browser, link)
+    page.open()
+    product_page = ProductPage(browser, browser.current_url)
+    product_page.should_not_be_success_message()
+
+def test_message_disappeared_after_adding_product_to_basket(browser):
+    link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
+    page = ProductPage(browser, link)
+    page.open()
+    product_page = ProductPage(browser, browser.current_url)
+    product_page.should_be_available_click_add_to_basket()
+    product_page.success_message_disappeared()
+
+
+
+
+
+
 
 
