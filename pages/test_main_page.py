@@ -8,6 +8,7 @@ def test_quest_can_go_to_login_page(browser):
     # page is instance of MainPage class with two arguments
     page.open()                    # open page by url
     login_page = LoginPage(browser, browser.current_url)
+    login_page.go_to_login_page()
     login_page.should_be_login_page()
 
 
