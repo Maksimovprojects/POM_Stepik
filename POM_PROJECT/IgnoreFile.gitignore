@@ -1,7 +1,7 @@
 # Created by pytest automatically.
-*geckodriver.log
+../geckodriver.log
 .pytest_cache/
 /__pycache__/
 /venv/
 /.idea/
-pages/.pytest_cache
+POM_PROJECT/pages/.pytest_cache

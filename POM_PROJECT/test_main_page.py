@@ -1,7 +1,7 @@
 import pytest
-from .main_page import MainPage
-from .login_page import LoginPage
-from .basket_page import BasketPage
+from POM_PROJECT.pages.main_page import MainPage
+from POM_PROJECT.pages.login_page import LoginPage
+from POM_PROJECT.pages.basket_page import BasketPage
 
 
 @pytest.mark.login_quest

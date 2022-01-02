@@ -1,8 +1,8 @@
 import pytest
 import time
-from .basket_page import BasketPage
-from .login_page import LoginPage
-from .product_page import ProductPage
+from POM_PROJECT.pages.basket_page import BasketPage
+from POM_PROJECT.pages.login_page import LoginPage
+from POM_PROJECT.pages.product_page import ProductPage
 
 
 def test_quest_can_go_to_product_page(browser):
@@ -82,6 +82,7 @@ def test_guest_should_see_login_link_on_product_page(browser):
     page = ProductPage(browser, link)
     page.open()
     page.should_be_login_link()
+
 
 @pytest.mark.need_review
 def test_guest_can_go_to_login_page_from_product_page(browser):
