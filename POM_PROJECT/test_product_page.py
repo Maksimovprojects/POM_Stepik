@@ -104,7 +104,7 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
 
 class TestUserAddToBasketFromProductPage:
     @pytest.fixture(scope="function", autouse=True)
-    def test_start(self, browser):
+    def setup(self, browser):
         link = "https://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
         page = LoginPage(browser, link)
         page.open()
